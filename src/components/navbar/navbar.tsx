@@ -1,7 +1,7 @@
 "use client";
 
+import { appRoutes, navLinks } from "@/lib/navigation";
 import { cn } from "@/utils/cn";
-import { appRoutes, navLinks } from "@/utils/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

@@ -153,3 +153,17 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .hide-autofill:-webkit-autofill,
+  .hide-autofill:-webkit-autofill:hover,
+  .hide-autofill:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px inherit inset !important;
+    box-shadow: 0 0 0px 1000px inherit inset !important;
+    -webkit-text-fill-color: inherit !important;
+    caret-color: inherit;
+    transition:
+      background-color 9999s ease-out,
+      color 9999s ease-out;
+  }
+}
