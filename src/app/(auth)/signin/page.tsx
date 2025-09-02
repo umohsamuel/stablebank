@@ -1,7 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { appRoutes } from "@/lib/navigation";
 import { MoveRight, Sparkles } from "lucide-react";
+import { redirect } from "next/navigation";
 
 export default function Login() {
+  async function handleSignIn() {
+    "use server";
+    redirect(appRoutes.dashboard.user.home);
+  }
+
   return (
     <div className="flex flex-col gap-7">
       <div className="flex flex-col gap-3">
@@ -42,7 +49,10 @@ export default function Login() {
         </div>
       </div>
 
-      <Button className="text-brand-white bg-brand-purple flex h-12 cursor-pointer items-center justify-center rounded-[40px] px-8 text-base font-semibold">
+      <Button
+        onClick={handleSignIn}
+        className="text-brand-white bg-brand-purple flex h-12 cursor-pointer items-center justify-center rounded-[40px] px-8 text-base font-semibold"
+      >
         Sign-in
       </Button>
     </div>

@@ -2,7 +2,7 @@ export const appRoutes = {
   auth: {
     signIn: "/signin",
     signUp: "/signup",
-    bankTag: "/bankTag",
+    bankTag: "/banktag",
   },
   dashboard: {
     user: {
