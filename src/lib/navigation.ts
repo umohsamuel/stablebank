@@ -7,7 +7,10 @@ export const appRoutes = {
   dashboard: {
     user: {
       home: "/u/home",
-      send: "/u/send",
+      send: {
+        index: "/u/send",
+        to: "/u/send/to",
+      },
       vcard: "/u/vcard",
       invest: "/u/invest",
       rewards: "/u/rewards",

@@ -7,7 +7,7 @@ import { appRoutes } from "@/lib/navigation";
 export default function UnifiedBalance() {
   async function handleSend() {
     "use server";
-    redirect(appRoutes.dashboard.user.send);
+    redirect(appRoutes.dashboard.user.send.index);
   }
 
   return (

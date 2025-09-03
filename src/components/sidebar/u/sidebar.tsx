@@ -57,7 +57,7 @@ export default function USidebar() {
 
       <div className="flex flex-col gap-1">
         {navItems.map((ni) => {
-          const isActive = pathname === ni.route;
+          const isActive = pathname.startsWith(ni.route);
           return (
             <div key={ni.route} className="relative px-3">
               {isActive && (
@@ -118,7 +118,7 @@ const navItems = [
   },
   {
     label: "Send",
-    route: appRoutes.dashboard.user.send,
+    route: appRoutes.dashboard.user.send.index,
     icon: ArrowUp,
   },
   {
