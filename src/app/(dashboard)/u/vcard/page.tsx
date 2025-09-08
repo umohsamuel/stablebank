@@ -46,21 +46,17 @@ export default function UVCard() {
         </div>
 
         <Dialog>
-          <DialogTrigger className="cursor-pointer">
-            <button className="flex items-center gap-1.5 rounded-[6px] bg-[#0E121C] px-8 py-3 text-[22px] font-bold text-white/60">
-              <RefreshCw size={26} />
-              <span>Regenerate</span>
-            </button>
+          <DialogTrigger className="flex cursor-pointer items-center gap-1.5 rounded-[6px] bg-[#0E121C] px-8 py-3 text-[22px] font-bold text-white/60">
+            <RefreshCw size={26} />
+            <span>Regenerate</span>
           </DialogTrigger>
           <RegenerateCardModal />
         </Dialog>
 
         <Dialog>
-          <DialogTrigger className="cursor-pointer">
-            <button className="flex items-center gap-1.5 rounded-[6px] bg-[#0E121C] px-8 py-3 text-[22px] font-bold text-white/60">
-              <Trash2 size={26} />
-              <span>Delete Card</span>
-            </button>
+          <DialogTrigger className="flex cursor-pointer items-center gap-1.5 rounded-[6px] bg-[#0E121C] px-8 py-3 text-[22px] font-bold text-white/60">
+            <Trash2 size={26} />
+            <span>Delete Card</span>
           </DialogTrigger>
           <DeleteVirtualCardModal />
         </Dialog>

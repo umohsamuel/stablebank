@@ -12,7 +12,7 @@ export default function DeleteVirtualCardModal() {
     <DialogContent className="w-full !max-w-[400px] rounded-[20px] border-none bg-[#0E121C] px-[18px] py-5">
       <DialogHeader>
         <DialogTitle className="flex flex-col gap-3 font-medium">
-          <h2 className="text-base">Delete Virtual Card</h2>
+          <p className="text-base">Delete Virtual Card</p>
           <p className="text-xs text-white/60">
             Are you sure you want to delete this card? This action cannot be
             undone.

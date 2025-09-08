@@ -12,10 +12,10 @@ export default function Why() {
         <div className="flex flex-col gap-5 text-[32px] font-normal">
           <p>Not everyone is ready for change. But you are.</p>
           <p>
-            You're part of a new generation that earns in dollars, spends in
-            euros, and saves in rupees. Traditional banking is stuck in the
-            past, making you pay for living in the future. That's why we built
-            StableBank –because those who take control of their financial
+            You&lsquo;re part of a new generation that earns in dollars, spends
+            in euros, and saves in rupees. Traditional banking is stuck in the
+            past, making you pay for living in the future. That&lsquo;s why we
+            built StableBank –because those who take control of their financial
             destiny deserve more than what traditional systems offer.
           </p>
           <p>More freedom. More trust. More rewards.</p>
