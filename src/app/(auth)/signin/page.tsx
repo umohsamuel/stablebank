@@ -60,7 +60,9 @@ export default function Login() {
       if (res.status >= 200 && res.status < 300) {
         toast.success("Login successful!");
         setToken(res.data.accessToken, res.data.refreshToken);
-        router.push(appRoutes.auth.bankTag);
+        requestAnimationFrame(() => {
+          router.push(appRoutes.auth.bankTag);
+        });
       }
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   DialogClose,
   DialogContent,
@@ -7,13 +9,17 @@ import {
 } from "@/components/ui/dialog";
 import { Power } from "lucide-react";
 import { Button } from "../ui/button";
-import { redirect, RedirectType } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { appRoutes } from "@/lib/navigation";
+import { clearToken } from "@/composables/token";
 
 export default function LogoutModal() {
+  const router = useRouter();
   const handleLogout = async () => {
-    "use server";
-    redirect(appRoutes.auth.signIn, RedirectType.replace);
+    clearToken();
+    requestAnimationFrame(() => {
+      router.replace(appRoutes.auth.signIn);
+    });
   };
 
   return (
