@@ -131,7 +131,7 @@ export default function Login() {
           {loginData.loading ? "Signing in..." : "Sign-in"}
         </Button>
         <p className="flex justify-end gap-2">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link
             href={appRoutes.auth.signUp}
             className="text-brand-purple font-bold"

@@ -95,7 +95,7 @@ const Tabs = () => {
 
 import { Zap, Trophy, Gift, Crown } from "lucide-react";
 
-export const overviewStats = [
+const overviewStats = [
   {
     label: "Points Balance",
     value: 2673,
