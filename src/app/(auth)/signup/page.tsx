@@ -133,12 +133,12 @@ export default function Signup() {
         </Button>
 
         <p className="flex justify-end gap-2">
-          Don't have an account?{" "}
+          Already have an account?{" "}
           <Link
-            href={appRoutes.auth.signUp}
+            href={appRoutes.auth.signIn}
             className="text-brand-purple font-bold"
           >
-            Sign up
+            Sign in
           </Link>
         </p>
       </div>

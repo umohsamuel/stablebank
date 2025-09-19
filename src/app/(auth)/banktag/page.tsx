@@ -105,6 +105,8 @@ export default function CreateBankTag() {
     } else {
       updateTagData("loading", false);
     }
+
+    router.replace(appRoutes.dashboard.user.home);
   }
 
   return (
