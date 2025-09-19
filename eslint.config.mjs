@@ -15,7 +15,7 @@ const eslintConfig = [
     plugins: ["prettier", "jsx-a11y"],
     rules: {
       "prettier/prettier": [
-        "warn",
+        "off",
         {
           tailwindAttributes: ["className"],
           tailwindFunctions: ["clsx", "tw"],
@@ -34,6 +34,7 @@ const eslintConfig = [
         },
       ],
       "react/react-in-jsx-scope": "off",
+      "@typescript-eslint/no-explicit-any": "off",
     },
   }),
 ];

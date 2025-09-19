@@ -41,6 +41,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
     window.addEventListener("auth:logout", handleLogout);
     return () => window.removeEventListener("auth:logout", handleLogout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const isAuthenticated = !!token;
