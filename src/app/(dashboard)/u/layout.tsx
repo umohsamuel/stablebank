@@ -2,7 +2,17 @@ import { UFooter } from "@/components/footer/u";
 import { USidebar } from "@/components/sidebar/u";
 import { UTopbar } from "@/components/topbar/u";
 import { AuthProvider } from "@/layouts/auth/auth.provider";
+import { Metadata } from "next";
 import { PropsWithChildren } from "react";
+
+export const metadata: Metadata = {
+  title: "StableBank | Dashboard",
+  description:
+    "Secure, scalable, and decentralized solutions for your digital assets—experience the future of financial freedom.",
+  icons: {
+    icon: "/images/brand/favicon.svg",
+  },
+};
 
 export default function UserDashboardLayout({ children }: PropsWithChildren) {
   return (

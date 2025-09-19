@@ -1,5 +1,15 @@
+import { Metadata } from "next";
 import Image from "next/image";
 import { PropsWithChildren } from "react";
+
+export const metadata: Metadata = {
+  title: "StableBank | Authentication",
+  description:
+    "Secure, scalable, and decentralized solutions for your digital assets—experience the future of financial freedom.",
+  icons: {
+    icon: "/images/brand/favicon.svg",
+  },
+};
 
 export default function AuthLayout({ children }: PropsWithChildren) {
   return (
