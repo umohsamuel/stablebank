@@ -5,6 +5,7 @@ import { appRoutes } from "@/lib/navigation";
 import { passwordSchema } from "@/schema/password";
 import axios, { AxiosResponse } from "axios";
 import { MoveRight, Sparkles } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -122,13 +123,25 @@ export default function Signup() {
         </div>
       </div>
 
-      <Button
-        type="submit"
-        disabled={signupData.loading}
-        className="text-brand-white bg-brand-purple flex h-12 cursor-pointer items-center justify-center rounded-[40px] px-8 text-base font-semibold"
-      >
-        {signupData.loading ? "Creating..." : "Create Account"}
-      </Button>
+      <div className="flex flex-col gap-1">
+        <Button
+          type="submit"
+          disabled={signupData.loading}
+          className="text-brand-white bg-brand-purple flex h-12 cursor-pointer items-center justify-center rounded-[40px] px-8 text-base font-semibold"
+        >
+          {signupData.loading ? "Creating..." : "Create Account"}
+        </Button>
+
+        <p className="flex justify-end gap-2">
+          Don't have an account?{" "}
+          <Link
+            href={appRoutes.auth.signUp}
+            className="text-brand-purple font-bold"
+          >
+            Sign up
+          </Link>
+        </p>
+      </div>
     </form>
   );
 }

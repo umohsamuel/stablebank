@@ -93,9 +93,66 @@ const Tabs = () => {
   );
 };
 
+import { Zap, Trophy, Gift, Crown } from "lucide-react";
+
+export const overviewStats = [
+  {
+    label: "Points Balance",
+    value: 2673,
+    description: "Available to spend",
+    icon: Zap,
+    color: "#4649D6",
+  },
+  {
+    label: "Total Earned",
+    value: 12450,
+    description: "Lifetime Points",
+    icon: Trophy,
+    color: "#CA8A04",
+  },
+  {
+    label: "Points Redeemed",
+    value: 9603,
+    description: "Total Spent",
+    icon: Gift,
+    color: "#319F43",
+  },
+  {
+    label: "Current Tier",
+    value: "Gold",
+    description: "Member level",
+    icon: Crown,
+    color: "#EA580C",
+  },
+];
+
 function OverviewTab() {
   return (
-    <div>
+    <div className="flex flex-col gap-[30px]">
+      <div className="flex flex-col gap-[29px]">
+        {overviewStats.map((stat) => (
+          <div
+            key={stat.label}
+            className={`flex items-center justify-between rounded-[14px] border-[0.2px] border-solid border-white/60 bg-[#0E121C] px-5 py-3`}
+            style={{ color: stat.color }}
+          >
+            <div className="flex flex-col">
+              <span className="text-2xl font-semibold text-[#E9E9E9]">
+                {stat.label}
+              </span>
+              <span className="text-[28px] font-semibold">{stat.value}</span>
+              <span className="text-base font-normal text-[#E9E9E9]">
+                {stat.description}
+              </span>
+            </div>
+
+            <div className="flex aspect-square w-[50px] items-center justify-center rounded-full bg-[#1F2937]">
+              <stat.icon size={31} />
+            </div>
+          </div>
+        ))}
+      </div>
+
       <Button className="text-brand-white bg-brand-purple flex h-12 w-full cursor-pointer items-center justify-center rounded-[10px] px-8 text-[22px] font-semibold">
         Redeem Points
       </Button>
@@ -104,7 +161,7 @@ function OverviewTab() {
 }
 
 function EarnTab() {
-  return <div>EarnTab</div>;
+  return <div></div>;
 }
 
 function RedeemTab() {
